@@ -25,7 +25,7 @@ function App() {
 
   return (
     <>
-      <form className='border rounded bg-light p-4'>
+      <form onSubmit={handleSubmit} className='border rounded bg-light p-4'>
         <div className="mb-3">
           <label for="exsampleAuthor" className="form-label">Autore del post</label>
           <input onChange={handleChange} type="text" name="name" value={formData.name} className="form-control" id="exsampleAuthor" placeholder="inserisci l'autore" />
