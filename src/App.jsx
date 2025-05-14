@@ -16,6 +16,13 @@ function App() {
     })
   }
 
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post("https://67c5b4f3351c081993fb1ab6.mockapi.io/api/posts", formData).then((resp) => {
+      console.log(resp.data)
+    })
+  }
+
   return (
     <>
       <form className='border rounded bg-light p-4'>
