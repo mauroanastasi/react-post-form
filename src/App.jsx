@@ -1,33 +1,28 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <div className="mb-3">
+        <label for="exsampleAuthor" className="form-label">Autore del post</label>
+        <input type="text" className="form-control" id="exsampleAuthor" placeholder="inserisci l'autore" />
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <div className="mb-3">
+        <label for="exsampleTitle" className="form-label">Titolo del post</label>
+        <input type="text" className="form-control" id="exsampleTitle" placeholder="inserisci l'autore" />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <div className="mb-3">
+        <label for="exampleFormControlTextarea1" className="form-label">Testo del post</label>
+        <textarea className="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      </div>
+      <div className="form-check">
+        <input className="form-check-input" type="checkbox" value="" id="checkIndeterminate" />
+        <label className="form-check-label" for="checkIndeterminate">
+          Spunta la casella se vuoi che il post venga pubblicato, in caso contrario lo salveremo tra le tue bozze.
+        </label>
+      </div>
     </>
   )
 }
