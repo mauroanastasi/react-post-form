@@ -9,6 +9,13 @@ function App() {
     updates: false
   });
 
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.type === `checkbox` ? e.target.checked : e.target.value
+    })
+  }
+
   return (
     <>
       <form className='border rounded bg-light p-4'>
