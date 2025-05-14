@@ -25,7 +25,7 @@ function App() {
           <textarea className="form-control" name="text" value={formData.text} id="exampleFormControlTextarea1" rows="3"></textarea>
         </div>
         <div className="form-check">
-          <input className="form-check-input" name="updates" value={formData.updates} type="checkbox" id="checkIndeterminate" />
+          <input className="form-check-input" name="updates" checked={formData.updates} type="checkbox" id="checkIndeterminate" />
           <label className="form-check-label" for="checkIndeterminate">
             Spunta la casella se vuoi che il post venga pubblicato, in caso contrario lo salveremo tra le tue bozze.
           </label>
